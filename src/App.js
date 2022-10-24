@@ -1,5 +1,5 @@
 import './App.css';
-import Fodie from './components/Foodie';
+import Movie from './components/Movie';
 import Nav from './components/Nav';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
@@ -10,7 +10,7 @@ function App() {
                 <div className="App">
                     <Nav />
                     <Routes>
-                        <Route exact path="/" element={<Fodie/>} />
+                        <Route exact path="/" element={<Movie/>} />
                     </Routes>
                 </div>
             </>

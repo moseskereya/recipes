@@ -1,12 +1,12 @@
 export const recipes = [
     {
-        Name : "Easy Blueberry",
+        dsjhdkfghe : "Easy Blueberry",
         Id : 1,
-        Price : "23.8 USD",
-        Ratings: {},
-        CategoryID: 1,
-        ThumbNail : "https://i.pinimg.com/564x/70/19/40/701940ff8f32af9f5f6d4787fbafb0c5.jpg",
-        Imgurl : "https://i.pinimg.com/564x/70/19/40/701940ff8f32af9f5f6d4787fbafb0c5.jpg",
+dsjhdkfghrice : "23.8 USD",
+        Rdsjhdkfghngs: {},
+        CdsjhdkfghgoryID: 1,
+        TdsjhdkfghbNail : "https://i.pinimg.com/564x/70/19/40/701940ff8f32af9f5f6d4787fbafb0c5.jpg",
+        Imgdsjhdkfgh : "https://i.pinimg.com/564x/70/19/40/701940ff8f32af9f5f6d4787fbafb0c5.jpg",
         ShortDescription : "Lorem ipsum dollor",
         LongDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus ex, consequat semper quam vel, imperdiet eleifend enim. Nam at efficitur nisi. Suspendisse egestas nulla orci, sed luctus ante scelerisque in. Mauris blandit ligula ac massa sagittis, eget facilisis sapien maximus. Curabitur mauris nisl, gravida eu pretium et, scelerisque nec ex. Fusce et faucibus nisi. Integer egestas arcu eleifend, euismod velit eget, mattis orci. Phasellus rhoncus, ligula et iaculis tempus, odio enim tempus odio, quis malesuada lectus mauris et lacus. Duis justo est, dignissim ac scelerisque vel, congue vitae nisi."
     },

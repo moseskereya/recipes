@@ -34,20 +34,29 @@ class Fodie extends Component {
                                             }
                                             modal
                                             nested
-                                        >
+                                                 >
                                             {close => (
                                                 <div className="modal">
                                                     <button className="close" onClick={close}>
                                                         &times;
                                                     </button>
-                                                    <div className="header">{res.Name}</div>
+                                                    <div className="header">
+                                                        <h3>{res.Name}</h3>
+                                                    </div>
+
                                                     <div className="content">
                                                         {' '}
-                                                        {res.ShortDescription}
+                                                        <p>{res.ShortDescription}</p>
                                                         <br />
                                                         <img src={res.Imgurl} alt="movie_img" />
                                                         <br />
-                                                        {res.LongDescription}
+                                                        <p>{res.LongDescription}</p>
+                                                        <div className="movie_detail_modal">
+                                                            <code className="star">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </code>
+                                                         <span>{res.Price.toUpperCase()}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             )}
@@ -55,17 +64,10 @@ class Fodie extends Component {
                                     </div>
                                 </div>
                                 <h4>{res.Name.toLocaleLowerCase()}</h4>
-                                <div className="movie_details">
-                                    <code className="star">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </code>
-                                    <span>Price : {res.Price.toUpperCase()}</span>
-                                </div>
                             </div>
                         )
                     })}
                 </div>
-
             </div>
          );
     }

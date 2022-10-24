@@ -38,15 +38,26 @@ html {
     scroll-behavior: smooth;
 }
 
+.fa-sun {
+    width: .8rem;
+    color: black;
+    cursor: pointer;
+}
+
+
 /* Header */
+.search {
+    margin: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 
 nav {
-    padding: 20px 0;
+    margin: 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: inset 120px 100px 250px  #252525, inset -120px -100px 250px #252525;
-
 }
 
 nav ul {
@@ -59,57 +70,20 @@ nav ul {
     height: 60px;
 }
 
-/* Modal */
-.modal {
-    font-size: 12px;
-    color: var(--main-font-color-dark);
-}
-
-.modal>.header {
-    width: 100%;
-    border-bottom: 1px solid gray;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-}
-
-.modal>.content {
-    width: 100%;
-    padding: 10px 5px;
-}
-
-.modal>.content img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-
-.modal>.close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid #cfcece;
-}
-/* // Modal */
-
 .logo-2 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+}
+.modal .content img{
+    width: 100%;
 }
 
 nav ul li {
     margin: 0 8px;
     color: white;
     list-style: none;
+    font-size: 1rem;
 }
 
 .show h3 {
@@ -118,14 +92,14 @@ nav ul li {
 }
 
 .link {
-    color: orange;
     text-decoration: none;
     transition: .5s ease-in-out;
     font-weight: 500;
+    color: orange;
 }
 
 .link:hover {
-    color: rgb(61, 60, 59);
+    color: var(--secondary-font-color)
 }
 
 .show {
@@ -136,24 +110,56 @@ nav ul li {
 }
 
 .banners {
-    height: 80vh;
+    height: 100vh;
     transition: .5s ease-in-out;
+    background-size: cover;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.search{
-    display: flex;
-    justify-content: flex-end;
-    margin: 10px 20px;
+.banner_content {
+    z-index: 100;
+}
+
+.viewmore {
+    padding: 10px 15px;
+    margin-top: 3rem;
+    z-index: 100;
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.viewmore:hover {
+    background-color: var(--main-color);
+}
+
+.banners::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: inherit;
+    width: inherit;
+    background-image: linear-gradient(345deg, black, rgba(13, 15, 36, 0.637));
 }
 
 
 .search input {
-    padding: 6px;
+    padding: 10px;
     margin: 3px;
-    width: 150px;
+}
+
+.movie_header{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--secondary-font-color);
 }
 
 .search input::focus-inner,
@@ -179,14 +185,23 @@ nav ul li {
     margin: 10px;
 }
 
-.movies_items .box {
-    width: 400px;
-    max-width: 300px;
+
+
+.movies_items .box{
+    max-width: 400px;
     position: relative;
     margin: 10px 6px;
-    height: 400px;
     box-sizing: border-box;
+    padding: 3rem 2rem;
+    margin: .6rem;
+    border-radius: 1rem;
 }
+
+.movies_items .box:hover{
+ box-shadow: inset 0 -4em 4em rgba(0, 0, 0, 0), 0 0 0 3px rgba(225, 27, 27, 0), 0.3em 0.3em 1em rgba(54, 54, 54, 0.205);
+}
+
+
 
 .movies_items .box .imgBox img {
     width: 100%;
@@ -205,9 +220,9 @@ nav ul li {
 .movies_items img {
     object-fit: cover;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 20px;
     width: 100%;
-    height: 350px;
+    height: 300px;
 }
 
 .movies_items img:hover {
@@ -216,29 +231,34 @@ nav ul li {
 }
 
 .movie_details p {
-    color: whitesmoke;
+    color: #c59d5f;
+    margin: .2rem;
 }
 
 .movie_details span {
-    color: #2a2b31;
+    padding: 1rem 0;
+    color: var(--secondary-font-color);
 }
 
 .movies_items h4 {
-    margin: 3px 0;
-    color: var(--main-font-color-dark);
+    margin: .8rem;
     text-transform: uppercase;
+    color: orange;
+
 }
 
 .collection_title {
-    margin: 25px;
+    margin: 5rem 2rem;
     color: orange;
+    text-transform: uppercase;
 }
 
 .link_back {
     text-decoration: none;
     color: whitesmoke;
     cursor: pointer;
-    margin-left: 1.3rem;
+    padding: 10px 20px;
+    background-color: orange;
     margin-top: 3rem;
 }
 
@@ -246,10 +266,6 @@ nav ul li {
     color: orange;
     padding: 5px;
     margin: 2px;
-}
-
-span {
-    margin: 4px;
 }
 
 .view-detail2 {
@@ -287,15 +303,11 @@ span {
 }
 
 /* Main */
-.date {
-    color: orange;
-    margin-top: 10px;
-}
 
 .play {
-    background-color: rgb(90, 36, 52);
     padding: 14px 14px;
     border: none;
+    background-color: red;
     margin: 3rem 1rem;
     text-align: center;
     text-decoration: none;
@@ -304,34 +316,48 @@ span {
 }
 
 .search_now {
-    padding: 6px 8px;
+    padding: 8px 8px;
     margin: 0 3px;
     transition: .5s ease-in-out;
-    background-color: orange;
     border-radius: 1px;
+    color: #fff;
     cursor: pointer;
+    background-color: red;
     outline: none;
     border: none;
 }
 
 .search_now:hover {
-    background-color: red;
     color: #fff;
 }
 
 .play:hover {
     margin: 3rem 1rem;
-    background-color: orange;
+    background-color: var(--main-font-color-dark);
 }
 
 .title_cats {
     margin-left: 2rem;
     text-transform: uppercase;
+    margin: 3rem;
 }
 
 .movies_items_images img {
     width: 200px;
     display: flex;
+}
+
+.not-found {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.not-found h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
 }
 
 .fa {
@@ -346,26 +372,37 @@ span {
 }
 
 .container {
-    display: grid;
-    margin-top: 2.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 0;
+    display: flex;
+}
+
+.back_to_movie {
+    margin: 4rem 0;
 }
 
 /* Responsive design */
 @media screen and (max-width: 1024px) {
     nav {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-end: auto;
+        justify-items: center;
+    }
+
+    .collection_title {
+        font-size: 16px;
     }
 
     .banners {
-        height: 40vh;
+        height: 90vh;
     }
 
     .movies_items {
         max-width: 25%;
     }
-
 
     .logo-2 {
         margin-left: 5.4rem;
@@ -377,9 +414,6 @@ span {
         justify-items: center;
         align-items: center;
     }
-    .modal{
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -388,8 +422,9 @@ span {
         align-items: center;
         align-content: center;
         width: 100%;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-row-end: auto;
+        justify-items: center;
     }
 
     .movies_items {
@@ -413,11 +448,6 @@ span {
 }
 
 @media screen and (max-width: 500px) {
-    nav {
-        display: flex;
-        justify-content: space-around;
-    }
-
     .search input {
         width: 60%;
         margin: 1.3rem 0;
@@ -473,6 +503,16 @@ span {
     padding: 10px;
 }
 
+.backs {
+    background-color: var(--secondary-font-color);
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.fa-backward {
+    color: var(--main-font-color-dark);
+}
+
 .showcase-top img {
     width: 170px;
     position: absolute;
@@ -502,6 +542,7 @@ span {
     margin-top: 9rem;
 }
 
+
 .showcase-content h1 {
     font-weight: 700;
     font-size: 5.2rem;
@@ -522,10 +563,9 @@ span {
     display: flex;
     justify-content: space-around;
     margin: 0;
-    padding: 1rem;
-    background-color: #2a2b31;
+    margin: 2rem 0;
     align-items: center;
-    color: #dbdbdb;
+    color: #c59d5f;
 }
 
 
@@ -579,7 +619,7 @@ span {
 }
 
 @media (max-width: 700px) {
-    .showcase::after {
+    .banners::after {
         background: rgba(0, 0, 0, 0.6);
         box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
     }
